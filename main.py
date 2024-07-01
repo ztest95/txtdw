@@ -1,6 +1,5 @@
 from PIL import Image, ImageDraw, ImageFont
 
-
 def parse_config(txt_file):
     with open(txt_file, "r") as file:
         config = {}
@@ -20,7 +19,6 @@ def parse_input(txt_file):
     return text
 
 if __name__ == "__main__":
-
     TEXT = parse_input(txt_file = "input.txt")
     CONFIG = parse_config(txt_file = "config.txt")
 
