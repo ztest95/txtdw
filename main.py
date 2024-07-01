@@ -19,6 +19,7 @@ def parse_input(txt_file):
     return text
 
 if __name__ == "__main__":
+    print("Running main.py")
     TEXT = parse_input(txt_file = "input.txt")
     CONFIG = parse_config(txt_file = "config.txt")
 

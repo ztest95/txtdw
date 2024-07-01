@@ -24,11 +24,12 @@ class Handler(FileSystemEventHandler):
     @staticmethod
     def on_modified(event):
         if event.src_path == ("./input.txt"):
-            print("File %s has been modified" % event.src_path)
+            print("%s has been modified" % event.src_path)
             subprocess.run([".venv/Scripts/python", "main.py"])
             # Place your code to run on file save here
 
 
 if __name__ == '__main__':
+    print("Running watcher.py")
     w = Watcher()
     w.run()
