@@ -1,0 +1,7 @@
+desktop_height = 1200
+desktop_width = 1920
+background_color = black
+text_position = center
+text_alignment = left
+text_color = white
+text_size = 64
