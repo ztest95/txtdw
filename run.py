@@ -2,6 +2,7 @@ import subprocess
 import psutil
 import time
 import os
+import ctypes
 
 def is_process_running(pid):    
     return psutil.pid_exists(pid)
@@ -26,6 +27,7 @@ def main():
         watchdog_proc.terminate()
         watchdog_proc.wait()
 
+    ctypes.windll.user32.SystemParametersInfoW(20, 0, os.path.join(script_dir, "output", "output.png"), 0)
     print("Program End")
     input("Press Enter to exit...")
 
