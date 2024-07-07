@@ -48,7 +48,7 @@ if __name__ == "__main__":
     draw.multiline_text(text_position, TEXT, fill=text_color, font=font, anchor='mm')
 
     # Save image
-    image.save("./output/output.png")
+    image.save("./output.png")
 
     # TODO
     # - Read Text from TXT File

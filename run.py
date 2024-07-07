@@ -12,7 +12,7 @@ def main():
 
     script_dir = os.path.dirname(os.path.abspath(__file__))
     python_path = os.path.join(script_dir, ".venv", "Scripts", "python")
-    watcher_path = os.path.join(script_dir, "watcher.py")
+    watcher_path = os.path.join(script_dir, "src/watcher.py")
     input_path = os.path.join(script_dir, "input.txt")
 
     watchdog_proc = subprocess.Popen([python_path, watcher_path])
@@ -27,7 +27,9 @@ def main():
         watchdog_proc.terminate()
         watchdog_proc.wait()
 
-    ctypes.windll.user32.SystemParametersInfoW(20, 0, os.path.join(script_dir, "output", "output.png"), 0)
+    ctypes.windll.user32.SystemParametersInfoW(20, 0, os.path.join(script_dir, "output.png"), 0)
+    print('Wallpaper set')
+
     print("Program End")
 
 if __name__ == '__main__':
