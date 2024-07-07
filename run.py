@@ -29,7 +29,6 @@ def main():
 
     ctypes.windll.user32.SystemParametersInfoW(20, 0, os.path.join(script_dir, "output", "output.png"), 0)
     print("Program End")
-    input("Press Enter to exit...")
 
 if __name__ == '__main__':
     main()
